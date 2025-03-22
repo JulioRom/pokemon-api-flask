@@ -1,0 +1,6 @@
+@echo off
+echo 🧹 Eliminando entorno virtual...
+pipenv --rm
+
+echo 🛠️ Reinstalando dependencias...
+pipenv install

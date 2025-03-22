@@ -1,0 +1,36 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+flask-login = "*"
+flask-bcrypt = "*"
+flask-restful = "*"
+flask-wtf = "*"
+marshmallow = "*"
+flask-marshmallow = "*"
+sqlalchemy = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-swagger = "*"
+python-dotenv = "*"
+flask-cors = "*"
+flask-admin = "*"
+wtforms = "3.1.2"
+wtforms-sqlalchemy = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+start = "flask --app src.app run -p 3000 -h 0.0.0.0"
+init = "flask --app src.app db init"
+migrate = "flask --app src.app db migrate -m 'Poke Tablas'"
+upgrade = "flask --app src.app db upgrade"
+reset-env = "pipenv --rm && pipenv install"
+seed = "python seeder.py"
+poke-seed = "python pokemon_seeder.py"
